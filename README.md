@@ -12,7 +12,7 @@ You will need:
 - The latest version of Java (JRE): https://www.java.com/en/download/
 - This font: https://fontstruct.com/fontstructions/show/1396587/gba-fe-dialogue
 
-////// ***********************IMPORTANT*********************************** \\\\\\
+////// ***IMPORTANT***\\\\\\
 
 Special Thanks goes to @radspacegal for the idea and both @radspacegal and @rajarajacholanI on twitter for help and testing.
 
