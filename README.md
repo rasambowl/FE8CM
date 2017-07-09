@@ -17,3 +17,4 @@ You will need:
 Special Thanks goes to @radspacegal for the idea and both @radspacegal and @rajarajacholanI on twitter for help and testing.
 
 Font credit goes to: GBA FE Dialouge - by dcapit8ed: https://fontstruct.com/fontstructions/show/1396587/gba-fe-dialogue
+I cannot legally redistribute this font.
