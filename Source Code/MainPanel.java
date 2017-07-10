@@ -79,20 +79,20 @@ import java.util.Scanner;
 		 textpanel.setLayout(new GridLayout(2,1));
 		 add(textpanel, BorderLayout.SOUTH);
 		 
-         charnamesone = new String[]{"Erika", "Ephraim", "Seth", "Gilliam", "Franz", "Moulder", "Vanessa", "Ross", "Neimi", "Colm", "Garcia", "Innes", "Lute", "Natasha", "Cormag", "Forde", "Kyle", "Amelia", "Artur", "Gerik", "Tethys", "Marisa", "Saleh", "Ewan", "L'Arachel", "Dozla", "Rennae", "Duessel", "Myrrh", "DragonMyrrh", "Knoll", "Joshua", "Syrene", "Tana", "Anna", "Caellach", "Glen","None"};
+         charnamesone = new String[]{"Eirika", "Ephraim", "Seth", "Gilliam", "Franz", "Moulder", "Vanessa", "Ross", "Neimi", "Colm", "Garcia", "Innes", "Lute", "Natasha", "Cormag", "Forde", "Kyle", "Amelia", "Artur", "Gerik", "Tethys", "Marisa", "Saleh", "Ewan", "L'Arachel", "Dozla", "Rennae", "Duessel", "Myrrh", "DragonMyrrh", "Knoll", "Joshua", "Syrene", "Tana", "Anna", "Caellach", "Glen","None"};
 		 
-		 charnamestwo = new String[]{"Ephraim", "Erika", "Seth", "Gilliam", "Franz", "Moulder", "Vanessa", "Ross", "Neimi", "Colm", "Garcia", "Innes", "Lute", "Natasha", "Cormag", "Forde", "Kyle", "Amelia", "Artur", "Gerik", "Tethys", "Marisa", "Saleh", "Ewan", "L'Arachel", "Dozla", "Rennae", "Duessel", "Myrrh", "DragonMyrrh", "Knoll", "Joshua", "Syrene", "Tana", "Anna", "Caellach", "Glen","None"};
+		 charnamestwo = new String[]{"Ephraim", "Eirika", "Seth", "Gilliam", "Franz", "Moulder", "Vanessa", "Ross", "Neimi", "Colm", "Garcia", "Innes", "Lute", "Natasha", "Cormag", "Forde", "Kyle", "Amelia", "Artur", "Gerik", "Tethys", "Marisa", "Saleh", "Ewan", "L'Arachel", "Dozla", "Rennae", "Duessel", "Myrrh", "DragonMyrrh", "Knoll", "Joshua", "Syrene", "Tana", "Anna", "Caellach", "Glen","None"};
 		 
-		 charnames = new String[]{"None", "Amelia", "Anna", "Artur", "Caellach", "Colm", "Cormag", "Dozla", "Duessel", "Ephraim", "Erika", "Ewan", "Forde", "Franz", "Garcia", "Gerik", "Gilliam", "Glen", "Innes", "Joshua", "Knoll", "Kyle", "L'Arachel", "Lute", "Lyon", "Marisa", "Moulder", "Myrrh", "MyrrhDragon", "Natasha", "Neimi", "Orson", "Rennae", "Riev", "Ross", "Saleh", "Selena", "Seth", "Syrene", "Tana", "Tethys", "Valter", "Vanessa", "Vigarde"};
+		 charnames = new String[]{"None", "Amelia", "Anna", "Artur", "Caellach", "Colm", "Cormag", "Dozla", "Duessel", "Eirika", "Ephraim", "Ewan", "Forde", "Franz", "Garcia", "Gerik", "Gilliam", "Glen", "Innes", "Joshua", "Knoll", "Kyle", "L'Arachel", "Lute", "Lyon", "Marisa", "Moulder", "Myrrh", "MyrrhDragon", "Natasha", "Neimi", "Orson", "Rennae", "Riev", "Ross", "Saleh", "Selena", "Seth", "Syrene", "Tana", "Tethys", "Valter", "Vanessa", "Vigarde"};
 		 
 		 ch1select = new JComboBox<String>(charnames);
 		 ch1select.addActionListener(new ch1Listener());
-		 ch1select.setSelectedIndex(10);
+		 ch1select.setSelectedIndex(9);
 		 ((JLabel)ch1select.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER);
 		 controlpanel.add(ch1select);
 		 
 		 ch2select = new JComboBox<String>(charnames);
-		 ch2select.setSelectedIndex(9);
+		 ch2select.setSelectedIndex(10);
 		 ch2select.addActionListener(new ch2Listener());
 		 ((JLabel)ch2select.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER);
 		 controlpanel.add(ch2select);

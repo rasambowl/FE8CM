@@ -56,7 +56,7 @@
 	    mouth1 = 1;
 	    mouth2 = 1;
 	    
-	    onechar = "Erika";
+	    onechar = "Eirika";
 	    twochar = "Ephraim";
 	    
 	  /*bg1 = new ImageIcon("Backgrounds/bg01.png");
@@ -82,7 +82,7 @@
 	    
 	    textbox = new ImageIcon("Assets/textbox.png");
 	    
-	    charone = new Character("Assets/Erika.png");
+	    charone = new Character("Assets/Eirika.png");
 	    chartwo = new Character("Assets/Ephraim.png");
 	    
 	    oneleft = true;
