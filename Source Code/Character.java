@@ -63,15 +63,16 @@ import java.util.Scanner;
 	   int mouthx =0;
 	   int mouthy =0;
 	   int loop =0;
+	   int countlimit = new File("Data").list().length;
 	   String tempname;
 	   int count = 1;
 	   
-	   while(!done && count<9)
+	   while(!done && count<countlimit)
 	   {
 		try {scanner = new Scanner(new File("Data/data"+count+".txt"));}
 	    catch (FileNotFoundException e){
 	    	myBuffer.drawString("ERROR.", 10, 25);
-	    	myBuffer.drawString("CHARACTER DATA COULD NOT BE RETRIVED.", 10, 50);
+	    	myBuffer.drawString("POSITION DATA COULD NOT BE RETRIVED.", 10, 50);
 	    	myBuffer.drawString("GO TWEET ME AT @RASAMBOWL", 10, 125);
 	    	myBuffer.drawString("I'LL TRY TO FIX IT FOR YOU.", 10, 150);
 	    }
@@ -177,25 +178,25 @@ import java.util.Scanner;
 		   case 1:
 			   break;
 		   case 2:
-			   myBuffer.drawImage(charaimg, mouthx, mouthy, (mWidth*2)+mouthx, (mHeight*2)+mouthy, 96, 80, 128, 96, null);
+			   myBuffer.drawImage(charaimg, mouthx, mouthy, (mWidth*2)+mouthx, (mHeight*2)+mouthy, 0, 80, 32, 96, null);
 			   break;
 		   case 3:
-			   myBuffer.drawImage(charaimg, mouthx, mouthy, (mWidth*2)+mouthx, (mHeight*2)+mouthy, 96, 96, 128, 112, null);
+			   myBuffer.drawImage(charaimg, mouthx, mouthy, (mWidth*2)+mouthx, (mHeight*2)+mouthy, 0, 96, 32, 112, null);
 			   break;
 		   case 4:
-			   myBuffer.drawImage(charaimg, mouthx, mouthy, (mWidth*2)+mouthx, (mHeight*2)+mouthy, 64, 80, 96, 96, null);
-			   break;
-		   case 5:
-			   myBuffer.drawImage(charaimg, mouthx, mouthy, (mWidth*2)+mouthx, (mHeight*2)+mouthy, 64, 96, 96, 112, null);
-			   break;
-		   case 6:
 			   myBuffer.drawImage(charaimg, mouthx, mouthy, (mWidth*2)+mouthx, (mHeight*2)+mouthy, 32, 80, 64, 96, null);
 			   break;
-		   case 7:
+		   case 5:
 			   myBuffer.drawImage(charaimg, mouthx, mouthy, (mWidth*2)+mouthx, (mHeight*2)+mouthy, 32, 96, 64, 112, null);
 			   break;
+		   case 6:
+			   myBuffer.drawImage(charaimg, mouthx, mouthy, (mWidth*2)+mouthx, (mHeight*2)+mouthy, 64, 80, 96, 96, null);
+			   break;
+		   case 7:
+			   myBuffer.drawImage(charaimg, mouthx, mouthy, (mWidth*2)+mouthx, (mHeight*2)+mouthy, 64, 96, 96, 112, null);
+			   break;
 		   case 8:
-			   myBuffer.drawImage(charaimg, mouthx, mouthy, (mWidth*2)+mouthx, (mHeight*2)+mouthy, 0, 80, 32, 96, null);
+			   myBuffer.drawImage(charaimg, mouthx, mouthy, (mWidth*2)+mouthx, (mHeight*2)+mouthy, 96, 80, 128, 96, null);
 			   break;
 		   }
 	   }

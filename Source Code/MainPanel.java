@@ -7,6 +7,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Scanner;
 
  public class MainPanel extends JPanel
@@ -16,7 +17,7 @@ import java.util.Scanner;
 	 */
 	private static final long serialVersionUID = 1L;
 	private static final int screenwidth = 240*2;
-	 private static final int screenheight = 160*2;
+	private static final int screenheight = 160*2;
 	 
 	 private Screen screen;
 	 private JPanel controlpanel;
@@ -41,8 +42,10 @@ import java.util.Scanner;
 	 private JTextField textbox;
 	 
 	 private String[] charnames;
-	 private String[] charnamesone;
-	 private String[] charnamestwo;
+	 private ArrayList<String> charanames;
+	 
+	 //private String[] charnamesone;
+	 //private String[] charnamestwo;
 	 private boolean cs;
 	 private int bgint;
 	 private String tempCharone;
@@ -79,11 +82,29 @@ import java.util.Scanner;
 		 textpanel.setLayout(new GridLayout(2,1));
 		 add(textpanel, BorderLayout.SOUTH);
 		 
-         charnamesone = new String[]{"Eirika", "Ephraim", "Seth", "Gilliam", "Franz", "Moulder", "Vanessa", "Ross", "Neimi", "Colm", "Garcia", "Innes", "Lute", "Natasha", "Cormag", "Forde", "Kyle", "Amelia", "Artur", "Gerik", "Tethys", "Marisa", "Saleh", "Ewan", "L'Arachel", "Dozla", "Rennae", "Duessel", "Myrrh", "DragonMyrrh", "Knoll", "Joshua", "Syrene", "Tana", "Anna", "Caellach", "Glen","None"};
+         //charnamesone = new String[]{"Eirika", "Ephraim", "Seth", "Gilliam", "Franz", "Moulder", "Vanessa", "Ross", "Neimi", "Colm", "Garcia", "Innes", "Lute", "Natasha", "Cormag", "Forde", "Kyle", "Amelia", "Artur", "Gerik", "Tethys", "Marisa", "Saleh", "Ewan", "L'Arachel", "Dozla", "Rennae", "Duessel", "Myrrh", "DragonMyrrh", "Knoll", "Joshua", "Syrene", "Tana", "Anna", "Caellach", "Glen","None"};
+		  //charnamestwo = new String[]{"Ephraim", "Eirika", "Seth", "Gilliam", "Franz", "Moulder", "Vanessa", "Ross", "Neimi", "Colm", "Garcia", "Innes", "Lute", "Natasha", "Cormag", "Forde", "Kyle", "Amelia", "Artur", "Gerik", "Tethys", "Marisa", "Saleh", "Ewan", "L'Arachel", "Dozla", "Rennae", "Duessel", "Myrrh", "DragonMyrrh", "Knoll", "Joshua", "Syrene", "Tana", "Anna", "Caellach", "Glen","None"};
 		 
-		 charnamestwo = new String[]{"Ephraim", "Eirika", "Seth", "Gilliam", "Franz", "Moulder", "Vanessa", "Ross", "Neimi", "Colm", "Garcia", "Innes", "Lute", "Natasha", "Cormag", "Forde", "Kyle", "Amelia", "Artur", "Gerik", "Tethys", "Marisa", "Saleh", "Ewan", "L'Arachel", "Dozla", "Rennae", "Duessel", "Myrrh", "DragonMyrrh", "Knoll", "Joshua", "Syrene", "Tana", "Anna", "Caellach", "Glen","None"};
+		 //charnames = new String[]{"None", "Amelia", "Anna", "Artur", "Caellach", "Colm", "Cormag", "Dozla", "Duessel", "Eirika", "Ephraim", "Ewan", "Forde", "Franz", "Garcia", "Gerik", "Gilliam", "Glen", "Innes", "Joshua", "Knoll", "Kyle", "L'Arachel", "Lute", "Lyon", "Marisa", "Moulder", "Myrrh", "MyrrhDragon", "Natasha", "Neimi", "Orson", "Rennae", "Riev", "Ross", "Saleh", "Selena", "Seth", "Syrene", "Tana", "Tethys", "Valter", "Vanessa", "Vigarde"};
 		 
-		 charnames = new String[]{"None", "Amelia", "Anna", "Artur", "Caellach", "Colm", "Cormag", "Dozla", "Duessel", "Eirika", "Ephraim", "Ewan", "Forde", "Franz", "Garcia", "Gerik", "Gilliam", "Glen", "Innes", "Joshua", "Knoll", "Kyle", "L'Arachel", "Lute", "Lyon", "Marisa", "Moulder", "Myrrh", "MyrrhDragon", "Natasha", "Neimi", "Orson", "Rennae", "Riev", "Ross", "Saleh", "Selena", "Seth", "Syrene", "Tana", "Tethys", "Valter", "Vanessa", "Vigarde"};
+		 charanames = new ArrayList<String>();
+		 try {
+			startup = new Scanner(new File("Data/charas.txt"));
+			 
+			while(startup.hasNext())
+			{
+				String name = startup.next();
+				charanames.add(name);
+			}
+			charnames = charanames.toArray(new String[0]);
+			 }
+		 catch (FileNotFoundException e) {
+		    screen.myBuffer.drawString("ERROR.", 10, 25);
+		    screen.myBuffer.drawString("CHARACTER DATA COULD NOT BE RETRIVED.", 10, 75);
+		    screen.myBuffer.drawString("GO TWEET ME AT @RASAMBOWL", 10, 125);
+		   	screen.myBuffer.drawString("I'LL TRY TO FIX IT FOR YOU.", 10, 150);
+		 }
+		 
 		 
 		 ch1select = new JComboBox<String>(charnames);
 		 ch1select.addActionListener(new ch1Listener());
