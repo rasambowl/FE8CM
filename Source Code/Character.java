@@ -77,6 +77,7 @@ import java.util.Scanner;
 	    	myBuffer.drawString("I'LL TRY TO FIX IT FOR YOU.", 10, 150);
 	    }
 		
+		//System.out.println("Character data retrieved from file: data" + count + ".txt");
 		eyex = scanner.nextInt()*2;
 		eyey = scanner.nextInt()*2;
 		mouthx = scanner.nextInt()*2;

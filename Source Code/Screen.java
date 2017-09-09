@@ -27,7 +27,7 @@
 	private String screenText;
 	private boolean screenDir;
 	private Font FEdialogue;
-	private Color black, grey;
+	private Color black, grey, red;
 	private String text1, text2;
 	private boolean single;
 	
@@ -43,8 +43,10 @@
 		screenDir = true;
 		screenText = "This is an example conversation, press Enter to set text.";
 		FEdialogue = new Font("GBA FE Dialogue", Font.PLAIN, 25);
+		//FEdialogue = new Font("Comic Sans MS", Font.PLAIN, 25);
 		black = new Color(40, 40, 40);
 		grey = new Color(184, 184, 184);
+		red = Color.red;
 		
 		myImage =  new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
 	    myBuffer = myImage.createGraphics();
@@ -58,25 +60,6 @@
 	    
 	    onechar = "Eirika";
 	    twochar = "Ephraim";
-	    
-	  /*bg1 = new ImageIcon("Backgrounds/bg01.png");
-	    bg2 = new ImageIcon("Backgrounds/bg02.png");
-	    bg3 = new ImageIcon("Backgrounds/bg03.png");
-	    bg4 = new ImageIcon("Backgrounds/bg04.png");
-	    bg5 = new ImageIcon("Backgrounds/bg05.png");
-	    bg6 = new ImageIcon("Backgrounds/bg06.png");
-	    bg7 = new ImageIcon("Backgrounds/bg07.png");
-	    bg8 = new ImageIcon("Backgrounds/bg08.png");
-	    bg9 = new ImageIcon("Backgrounds/bg09.png");
-	    bg10 = new ImageIcon("Backgrounds/bg10.png");
-	    bg11 = new ImageIcon("Backgrounds/bg11.png");
-	    bg12 = new ImageIcon("Backgrounds/bg12.png");
-	    bg13 = new ImageIcon("Backgrounds/bg13.png");
-	    bg14 = new ImageIcon("Backgrounds/bg14.png");
-	    bg15 = new ImageIcon("Backgrounds/bg15.png");
-	    bg16 = new ImageIcon("Backgrounds/bg16.png");
-	    bg17 = new ImageIcon("Backgrounds/bg17.png");
-	    bg18 = new ImageIcon("Backgrounds/bg18.png");*/
 	    
 	    bg = new ImageIcon("Backgrounds/Rock.png");
 	    
@@ -106,64 +89,6 @@
 	public void setBackground(String bgname)
 	{
 		bg = new ImageIcon("Backgrounds/"+bgname+".png");
-		
-		/*switch(bgint)
-		{
-		case 1:
-			bg = bg1;
-			break;
-		case 2:
-			bg = bg2;
-			break;
-		case 3:
-			bg = bg3;
-			break;
-		case 4:
-			bg = bg4;
-			break;
-		case 5:
-			bg = bg5;
-			break;
-		case 6:
-			bg = bg6;
-			break;
-		case 7:
-			bg = bg7;
-			break;
-		case 8:
-			bg = bg8;
-			break;
-		case 9:
-			bg = bg9;
-			break;
-		case 10:
-			bg = bg10;
-			break;
-		case 11:
-			bg = bg11;
-			break;
-		case 12:
-			bg = bg12;
-			break;
-		case 13:
-			bg = bg13;
-			break;
-		case 14:
-			bg = bg14;
-			break;
-		case 15:
-			bg = bg15;
-			break;
-		case 16:
-			bg = bg16;
-			break;
-		case 17:
-			bg = bg17;
-			break;
-		case 18:
-			bg = bg18;
-			break;
-		}*/
 	}
 	public void setCharone(String chara)
 	{
@@ -231,12 +156,14 @@
 			myBuffer.drawImage(textimg, 16,48, 184*2, 55*2, null);
 			myBuffer.drawString(text, 34, 92);
 			myBuffer.setColor(black);
+			//myBuffer.setColor(red);
 			myBuffer.drawString(text, 32, 92);}
 			else{
 				myBuffer.drawImage(textimg, 16,48, 184*2, 55*2, null);
 				myBuffer.drawString(text1, 34, 92);
 				myBuffer.drawString(text2, 34, 124);
 				myBuffer.setColor(black);
+				//myBuffer.setColor(red);
 				myBuffer.drawString(text1, 32, 92);
 				myBuffer.drawString(text2, 32, 124);}
 		}
@@ -250,12 +177,14 @@
 			myBuffer.drawImage(textimg, 96,48, 184*2, 55*2, null);
 			myBuffer.drawString(text, 116, 92);
 			myBuffer.setColor(black);
+			//myBuffer.setColor(red);
 			myBuffer.drawString(text, 114, 92);}
 			else{
 				myBuffer.drawImage(textimg, 96,48, 184*2, 55*2, null);
 				myBuffer.drawString(text1, 116, 92);
 				myBuffer.drawString(text2, 116, 124);
 				myBuffer.setColor(black);
+				//myBuffer.setColor(red);
 				myBuffer.drawString(text1, 114, 92);
 				myBuffer.drawString(text2, 114, 124);}
 		}

@@ -35,6 +35,7 @@ import java.util.Scanner;
 	 private JButton bgbutton;
 	 private JComboBox bgselect;
 	 private String[] bgtitles;
+	 private ArrayList<String> bgnames;
 	 
 	 private JButton expbutton;
 	 
@@ -108,12 +109,12 @@ import java.util.Scanner;
 		 
 		 ch1select = new JComboBox<String>(charnames);
 		 ch1select.addActionListener(new ch1Listener());
-		 ch1select.setSelectedIndex(9);
+		 //ch1select.setSelectedIndex(9);
 		 ((JLabel)ch1select.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER);
 		 controlpanel.add(ch1select);
 		 
 		 ch2select = new JComboBox<String>(charnames);
-		 ch2select.setSelectedIndex(10);
+		 //ch2select.setSelectedIndex(10);
 		 ch2select.addActionListener(new ch2Listener());
 		 ((JLabel)ch2select.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER);
 		 controlpanel.add(ch2select);
@@ -138,12 +139,25 @@ import java.util.Scanner;
 		 mouth2button.addActionListener(new mouth2Listener());
 		 controlpanel.add(mouth2button);
 		 
-		 /*bgint = 1;
-		 bgbutton = new JButton("Change Background: " + bgint);
-		 bgbutton.addActionListener(new bgListener());
-		 controlpanel.add(bgbutton);*/
+		 bgnames = new ArrayList<String>();
+		 try {
+			startup = new Scanner(new File("Data/backgrounds.txt"));
+			 
+			while(startup.hasNext())
+			{
+				String name = startup.nextLine();
+				bgnames.add(name);
+			}
+			bgtitles = bgnames.toArray(new String[0]);
+			 }
+		 catch (FileNotFoundException e) {
+		    screen.myBuffer.drawString("ERROR.", 10, 25);
+		    screen.myBuffer.drawString("BACKGROUND DATA COULD NOT BE RETRIVED.", 10, 75);
+		    screen.myBuffer.drawString("GO TWEET ME AT @RASAMBOWL", 10, 125);
+		   	screen.myBuffer.drawString("I'LL TRY TO FIX IT FOR YOU.", 10, 150);
+		 }
 		 
-		 bgtitles = new String[]{"None", "Rock", "Caer Pelyn", "House", "Normal Village", "Village Clear", "Village Sunset", "Serafew Village", "Serafew Flashback", "Port", "Ship", "Fireplace", "Castle Interior", "Castle Night", "Grado Chamber", "Throne Normal", "Throne Flashback", "Castle Bright", "Castle Dark", "Gate", "Garden", "Garden Flashback", "Manse Back", "Manse Flashback", "Cell", "Plain 1", "Plain 1 Fog", "Plain 1 Sunset", "Plain 2", "Plain 2 Fog", "Plain 2 Sunset", "Plain 2 Night", "Grass Plains", "Grass Plains 2", "Stream", "Trees", "Forest", "Town", "Castle Back", "Interior Black", "Interior Brown", "Fort Sunset", "Passage", "Burning Castle", "Stone Chamber", "Stone Flashback", "Renais Chamber", "White Temple", "Desert", "Darkling Woods", "Volcano", "Black Temple Outside", "Black Temple Inside"};
+		 //bgtitles = new String[]{"None", "Rock", "Caer Pelyn", "House", "Normal Village", "Village Clear", "Village Sunset", "Serafew Village", "Serafew Flashback", "Port", "Ship", "Fireplace", "Castle Interior", "Castle Night", "Grado Chamber", "Throne Normal", "Throne Flashback", "Castle Bright", "Castle Dark", "Gate", "Garden", "Garden Flashback", "Manse Back", "Manse Flashback", "Cell", "Plain 1", "Plain 1 Fog", "Plain 1 Sunset", "Plain 2", "Plain 2 Fog", "Plain 2 Sunset", "Plain 2 Night", "Grass Plains", "Grass Plains 2", "Stream", "Trees", "Forest", "Town", "Castle Back", "Interior Black", "Interior Brown", "Fort Sunset", "Passage", "Burning Castle", "Stone Chamber", "Stone Flashback", "Renais Chamber", "White Temple", "Desert", "Darkling Woods", "Volcano", "Black Temple Outside", "Black Temple Inside"};
 		 bgselect = new JComboBox<String>(bgtitles);
 		 ((JLabel)bgselect.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER);
 		 bgselect.addActionListener(new bgListener());

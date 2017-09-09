@@ -1,0 +1,53 @@
+None
+Rock
+Caer Pelyn
+House
+Normal Village
+Village Clear
+Village Sunset
+Serafew Village
+Serafew Flashback
+Port
+Ship
+Fireplace
+Castle Interior
+Castle Night
+Grado Chamber
+Throne Normal
+Throne Flashback
+Castle Bright
+Castle Dark
+Gate
+Garden
+Garden Flashback
+Manse Back
+Manse Flashback
+Cell
+Plain 1
+Plain 1 Fog
+Plain 1 Sunset
+Plain 2
+Plain 2 Fog
+Plain 2 Sunset
+Plain 2 Night
+Grass Plains
+Grass Plains 2
+Stream
+Trees
+Forest
+Town
+Castle Back
+Interior Black
+Interior Brown
+Fort Sunset
+Passage
+Burning Castle
+Stone Chamber
+Stone Flashback
+Renais Chamber
+White Temple
+Desert
+Darkling Woods
+Volcano
+Black Temple Outside
+Black Temple Inside
