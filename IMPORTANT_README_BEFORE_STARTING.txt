@@ -8,7 +8,11 @@ I'm @rasambowl on Twitter, if you have any questions or concerns about this prog
 
 From update 1.2, here is the tutorial on how to import your own characters: https://www.youtube.com/watch?v=fJSisIypriM
 
-THIS IS VERSION 1.3 CHANGES ARE BELOW
+IMPORTANT CHANGES
+
+-added mini version with smaller resolution
+
+-added font in font files
 
 -added all important FE 6, 7 , and 8 characters
 
@@ -22,6 +26,7 @@ You will need:
 
 - The latest version of Java (JRE): https://www.java.com/en/download/
 - This font: https://fontstruct.com/fontstructions/show/1396587/gba-fe-dialogue
+or you can find it in this folder.
 
 ////// ***********************IMPORTANT*********************************** \\\\\\
 
