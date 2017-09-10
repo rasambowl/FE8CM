@@ -1,3 +1,5 @@
+#FE8CM
+
 Hey there!
 
 This used to be a conversation maker for just Fire Emblem: The Sacred Stones.
