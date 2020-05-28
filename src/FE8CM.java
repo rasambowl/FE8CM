@@ -2,7 +2,7 @@ import javax.swing.JFrame;
    public class FE8CM
    {
 	   private static final int width = 240*2;
-		private static final int height = 800;
+		private static final int height = 600;
 	   public static void main(String[] args)
       { 
          JFrame frame = new JFrame("GBA Fire Emblem Conversation Maker");

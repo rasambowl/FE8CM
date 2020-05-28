@@ -113,6 +113,7 @@ import java.util.Scanner;
 		   charaimg = op.filter(charaimg, null);
 
 		   myBuffer.drawImage(charaimg, -64, 160, wholeWidth*2, wholeHeight*2, null);
+		   //could just negate the width and adjust all the x positions for everything accordingly but to be honest that is way too much work that i dont want to do right now
 		   
 		   switch(eye)
 		   {

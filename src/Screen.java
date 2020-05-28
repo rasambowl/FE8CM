@@ -1,4 +1,6 @@
  import javax.swing.*;
+ import java.io.*; 
+ import java.io.InputStream;
  import java.awt.*;
  import java.awt.event.*;
  import java.awt.geom.AffineTransform;
@@ -42,8 +44,22 @@
 	{
 		screenDir = true;
 		screenText = "This is an example conversation, press Enter to set text.";
-		FEdialogue = new Font("GBA FE Dialogue", Font.PLAIN, 25);
-		//FEdialogue = new Font("Comic Sans MS", Font.PLAIN, 25);
+		try {
+			String fName = "Font/GBA FE Dialogue.ttf";
+			//InputStream is = Screen.class.getResourceAsStream(fName);
+			//Font FEdialogue = Font.createFont(Font.TRUETYPE_FONT, is);
+			InputStream myStream = new BufferedInputStream(new FileInputStream(fName));
+            Font ttfBase = Font.createFont(Font.TRUETYPE_FONT, myStream);
+            FEdialogue = ttfBase.deriveFont(Font.PLAIN, 25);   
+		}
+	    catch(IOException e) {
+	    	FEdialogue = new Font("Comic Sans MS", Font.PLAIN, 25);
+	    	System.out.println(e);
+	    }
+		catch(FontFormatException e) {
+			FEdialogue = new Font("Comic Sans MS", Font.PLAIN, 25);
+			System.out.println(e);
+	    }
 		black = new Color(40, 40, 40);
 		grey = new Color(184, 184, 184);
 		red = Color.red;
