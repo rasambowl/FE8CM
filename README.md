@@ -1,4 +1,12 @@
-#FE8CM
+# FE8CM
+
+//Update 5/27/2020 whatever version this is i don't really care anymore
+I haven't touched this in a couple of years, but I found out that something changed in either Windows or Java that prevented the fonts from working.
+I've made it so that there's only one jar file, the mini version, and embedded the font into the jar file, so it doesn't need to be installed on the system. This should fix that issue.
+
+I was kind of an idiot when I made this and didn't know how to use github so this repository wasn't actually my working directory, so I've changed that and put the old repository in a separate branch.
+Now the repository should be my working directory, and you can just download or clone it because to be honest, I have no idea how to make the jar portable.
+//
 
 Hey there!
 
